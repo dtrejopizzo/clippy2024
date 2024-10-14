@@ -82,13 +82,6 @@ function ChatMessageContent({
       component: imageData[0] ? <ChatImage data={imageData[0]} /> : null,
     },
     {
-      order: -3,
-      component:
-        eventData.length > 0 ? (
-          <ChatEvents isLoading={isLoading} data={eventData} />
-        ) : null,
-    },
-    {
       order: -2,
       component:
         agentEventData.length > 0 ? (
@@ -113,10 +106,6 @@ function ChatMessageContent({
     {
       order: 0,
       component: <Markdown content={message.content} sources={sourceData[0]} />,
-    },
-    {
-      order: 3,
-      component: sourceData[0] ? <ChatSources data={sourceData[0]} /> : null,
     },
     {
       order: 4,
