@@ -7,13 +7,13 @@ import { getAuth, onAuthStateChanged } from 'firebase/auth'
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBaXRzj-Behx8TqpGya5ZKOju_SEfnghnM",
-  authDomain: "clippy-cbc.firebaseapp.com",
-  projectId: "clippy-cbc",
-  storageBucket: "clippy-cbc.appspot.com",
-  messagingSenderId: "1010590048595",
-  appId: "1:1010590048595:web:090e6511cbe1ddd0b2c1a6",
-  measurementId: "G-YFE116D95T"
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
 };
 
 // Initialize Firebase
